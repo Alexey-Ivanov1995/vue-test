@@ -1,0 +1,80 @@
+.aside{
+  $color: #c5c3c4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  -moz-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  &__user{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title{
+      color: $color;
+    }
+    &__photo{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      overflow: hidden;
+      background: white;
+      margin-bottom: 10px;
+      img{
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title{
+      text-align: center;
+    }
+  }
+
+  &__body{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+    -moz-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+    box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  }
+
+  &__info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__info-item{
+    margin-bottom: 10px;
+  }
+  &__info-currency,
+  &__info-value{
+    color: $color;
+    text-align: center;
+  }
+}
+@media all and (max-width: 880px) {
+  .aside{
+    flex-direction: row;
+    padding: 10px;
+    gap: 30px;
+    &__body{
+      width: auto;
+    }
+    &__info-list{
+      flex-direction: row;
+    }
+  }
+}
+@media all and (max-width: 440px) {
+  .aside{
+    flex-direction: column;
+    gap: 10px;
+    &__user{
+      margin-bottom: 0;
+    }
+  }
+}

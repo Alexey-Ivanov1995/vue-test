@@ -1,6 +1,15 @@
 import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-
-createApp(App).use(store).use(router).mount('#app')
+import App from '@/App.vue'
+import router from '@/router'
+import store from '@/store'
+import axios from 'axios'
+import Toaster from '@meforma/vue-toaster';
+import VueAxios from 'vue-axios'
+createApp(App)
+    .use(store)
+    .use(router)
+    .use(Toaster,{
+        position: 'top-right'
+    })
+    .use(VueAxios, axios)
+    .mount('#app')

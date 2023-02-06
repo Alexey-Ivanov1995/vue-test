@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+@import 'sections/section-main';
+@import 'sections/section-aside';
+@import 'sections/sections-login';
+@import 'sections/section-auth';
+@import 'sections/section-home';
+
+@import "elements/buttons";
+
+@import "components/aside";
+@import "components/card";

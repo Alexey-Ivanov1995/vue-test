@@ -1,0 +1,33 @@
+.section-home{
+  height: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  -moz-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+  display: grid;
+  gap: 15px;
+  grid-template-rows: 1fr 25px;
+  .home{
+    &__body{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      //grid-template-rows: repeat(2, 40%);
+      gap: 10px;
+      overflow: auto;
+    }
+    &__footer{
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+@media all and (max-width: 500px) {
+  .section-home{
+    .home{
+      &__body{
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+  }
+}

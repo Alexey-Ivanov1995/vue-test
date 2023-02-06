@@ -1,0 +1,26 @@
+.button{
+  border: none;
+  outline: none;
+  background: none;
+  padding: 5px 20px;
+  transition: .2s;
+
+  &.button-default{
+    background: #20222c;
+    border-radius: 5px;
+    color: #c5c3c4;
+    -webkit-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+    -moz-box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+    box-shadow: -1px 0px 8px 8px rgba(249, 253, 255, 0.12);
+
+    &:hover {
+      cursor: pointer;
+      transition: .2s;
+      background: #646678;
+    }
+  }
+  &.button-disabled{
+    opacity: .5;
+    cursor: auto;
+  }
+}
